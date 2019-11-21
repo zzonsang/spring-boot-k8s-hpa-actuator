@@ -1,0 +1,19 @@
+server:
+  address: 0.0.0.0
+activemq:
+  brokerUrl: ${ACTIVEMQ_BROKER_URL:vm://localhost:61616}
+queue:
+  name: ${QUEUE_NAME:mainQueue}
+  count: ${QUEUE_COUNT:1}
+  conc: ${QUEUE_CONC:1}
+worker:
+  name: ${HOSTNAME:worker1}
+  enabled: ${WORKER_ENABLED:true}
+store:
+  enabled: ${STORE_ENABLED:true}
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
